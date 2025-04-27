@@ -15,5 +15,5 @@ game with
 
 Here are the [rules](https://www.exploratorium.edu/explore/puzzles/tictactoe) (even if every body knows them). <br>
 There is 2 players, player X and player O, the first to play is X and the second O. <br>
-You have to give the coordinates (they go from a1 to c3) and the tray will update itself. <br>
+You have to give the coordinates (they go from a1 to c3) and the board will update itself. <br>
 Every game is saved in a folder name "history", the name of every partie is like that: X_Win(n).txt or Draw(n).txt, with X the symbol of the winner and n the number of time the file already exist. <br>
