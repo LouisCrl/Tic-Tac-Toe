@@ -1,3 +1,4 @@
+//this file is the main.rs file with the main function in it
 mod case;
 mod save;
 mod game;
@@ -9,6 +10,7 @@ use case::Case;
 use save::Save;
 use game::{Game, GameState};
 
+//main function necessary in every Rust programs
 fn main() {
     println!("Hello, welcome to my Rust tic tac toe game ! If you want the tic tac toe rules, here they are: https://www.exploratorium.edu/explore/puzzles/tictactoe");
     println!("After that, good luck and have fun !");

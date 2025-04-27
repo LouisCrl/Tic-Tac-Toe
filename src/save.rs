@@ -1,3 +1,4 @@
+//this file is the saving system
 use std::fs;
 use std::path::Path;
 use std::io::{Write, Result};
@@ -7,6 +8,7 @@ use crate::game::Game;
 pub struct Save;
 
 impl Save {
+    //write every turns in a file named save.txt
     pub fn write_to_file(game: &Game) -> Result<()> {
         let mut file = OpenOptions::new().create(true).append(true).open("history/save.txt")?;
         for line in game.board().printed_board() {
@@ -23,17 +25,20 @@ impl Save {
         Ok(())
     }
 
+    //delete the previous inscriptions in a file named save.txt and if doesn't exist, create one
     pub fn delete_previous() -> Result<()> {
         File::create("history/save.txt")?;
 
         Ok(())
     }
 
+    //rename a file
     pub fn rename_file(old_name: &str, new_name: &str) -> std::io::Result<()> {
         fs::rename(old_name, new_name)?;
         Ok(())
     }
 
+    //return a string of the new file index (to get the the (1) in the file Draw(1).txt)
     pub fn get_new_file_index(base_name: &str) -> String {
         let mut index = 1;
         let mut new_file_name = format!("{}({})", base_name, index);

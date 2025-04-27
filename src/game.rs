@@ -1,3 +1,4 @@
+//this file is the core program of the game progress
 use crate::case::Case;
 use crate::board::Board;
 use crate::player::Player;
@@ -17,6 +18,7 @@ pub struct Game {
 }
 
 impl Game {
+    //initialisation of the game
     pub fn init() -> Self {
         let (p1, p2) = Player::init();
         let players = (p1, p2);
@@ -29,18 +31,22 @@ impl Game {
         }
     }
 
+    //returns the board
     pub fn board(&self) -> &Board {
         &self.board
     }
 
+    //returns the gamestate
     pub fn state(&self) -> &GameState {
         &self.state
     }
 
+    //returns the current_turn
     pub fn current_turn(&self) -> &Player {
         &self.current_turn
     }
 
+    //the main method for the progress of one turn
     pub fn play(&mut self, case: &str) -> bool {
         if self.state == GameState::Ongoing {
             if self.board.verify_case(case) {
@@ -71,12 +77,14 @@ impl Game {
         true
     }
 
+    //the checks if there is a winner, return true if there is one, else return false
     fn verify_win(&self) -> bool {
         self.board.check_lines(&self.current_turn.sign()) ||
         self.board.check_columns(&self.current_turn.sign()) ||
         self.board.check_diagonals(&self.current_turn.sign())
     }
 
+    //change the current_player turn
     fn change_turn(&mut self) {
         self.current_turn = if *self.current_turn.sign() == Case::Cross {
             self.players.1.clone()

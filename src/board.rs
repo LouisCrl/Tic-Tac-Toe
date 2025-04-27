@@ -1,3 +1,4 @@
+//this file is the board management
 use crate::case::Case;
 
 #[derive(Clone)]
@@ -6,6 +7,7 @@ pub struct Board {
 }
 
 impl Board {
+    //initialisation of an empty board
     pub fn init() -> Self {
         Board {
             board: vec![
@@ -16,6 +18,7 @@ impl Board {
         }
     }
 
+    //verification if a box is available or if the box exist, if yes return true, else return false
     pub fn verify_case(&self, case: &str) -> bool {
         match case {
             "a1" => self.board[0][0] == Case::Void,
@@ -34,6 +37,7 @@ impl Board {
         }
     }
 
+    //changes the box by the sign given
     pub fn define_case(&mut self, case: &str, sign: &Case) {
         match case {
             "a1" => self.board[0][0] = sign.clone(),
@@ -51,6 +55,7 @@ impl Board {
         }
     }
 
+    //returns a vector of string with every line of the board in it (usefull for the save in a .txt file)
     pub fn printed_board(&self) -> Vec<String> {
         let mut lines = Vec::new();
         let mut i: u8 = 0;
@@ -70,12 +75,14 @@ impl Board {
         lines
     }
 
+    //print the game in the console
     pub fn print(&self) {
         for lines in &self.printed_board() {
             println!("{}", lines)
         }
     }
 
+    //check the lines, if the player wins: return true, else return false
     pub fn check_lines(&self, sign: &Case) -> bool {
         for row in &self.board {
             if row[1] == *sign {
@@ -87,6 +94,7 @@ impl Board {
         false
     }
 
+    //check the columns, if the player wins: return true, else return false
     pub fn check_columns(&self, sign: &Case) -> bool {
         for col in 0..3 {
             if self.board[1][col] == *sign {
@@ -98,6 +106,7 @@ impl Board {
         false
     }
 
+    //check the diagonals, if the player wins: return true, else return false
     pub fn check_diagonals(&self, sign: &Case) -> bool {
         if self.board[1][1] == *sign {
             if &self.board[0][0] == &self.board[1][1] && &self.board[1][1] == &self.board[2][2] {
@@ -109,6 +118,7 @@ impl Board {
         false
     }
 
+    //check if the board is full (no Void variat), if the board is full: return true, else return false
     pub fn check_full(&self) -> bool {
         for row in &self.board {
             for case in row {
