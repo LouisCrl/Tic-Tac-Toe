@@ -19,7 +19,7 @@ fn main() {
         let mut g = Game::init();
         g.board().print();
         while *g.state() == GameState::Ongoing {
-            println!("Player {}, please input the case you want to play on.", match g.current_turn().sign() {
+            println!("Player {}, please input the box you want to play on.", match g.current_turn().sign() {
                 Case::Cross => "X",
                 Case::Circle => "O",
                 _ => "?",
