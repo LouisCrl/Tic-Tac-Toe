@@ -1,0 +1,144 @@
+     #   #   
+1  X #   #   
+     #   #   
+  ###########
+     #   #   
+2    #   #   
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2    #   #   
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2    # X #   
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2  O # X #   
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2  O # X #   
+     #   #   
+  ###########
+     #   #   
+3    # X #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2  O # X #   
+     #   #   
+  ###########
+     #   #   
+3    # X # O 
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2  O # X # X 
+     #   #   
+  ###########
+     #   #   
+3    # X # O 
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O #   
+     #   #   
+  ###########
+     #   #   
+2  O # X # X 
+     #   #   
+  ###########
+     #   #   
+3  O # X # O 
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X # O # X 
+     #   #   
+  ###########
+     #   #   
+2  O # X # X 
+     #   #   
+  ###########
+     #   #   
+3  O # X # O 
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Draw
+----------------------------

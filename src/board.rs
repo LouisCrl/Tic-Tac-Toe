@@ -18,6 +18,10 @@ impl Board {
         }
     }
 
+    pub fn board(&self) -> &Vec<Vec<Case>> {
+        &self.board
+    }
+
     //verification if a box is available or if the box exist, if yes return true, else return false
     pub fn verify_case(&self, case: &str) -> bool {
         match case {
@@ -78,7 +82,7 @@ impl Board {
     //print the game in the console
     pub fn print(&self) {
         for lines in &self.printed_board() {
-            println!("{}", lines)
+            println!("{}", lines);
         }
     }
 

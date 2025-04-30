@@ -1,4 +1,5 @@
 //this file is the core program of the game progress
+use std::io;
 use crate::case::Case;
 use crate::board::Board;
 use crate::player::Player;
@@ -20,7 +21,28 @@ pub struct Game {
 impl Game {
     //initialisation of the game
     pub fn init() -> Self {
-        let (p1, p2) = Player::init();
+        let mode: u32 = loop {
+            println!("Want to play:");
+            println!("1/ Alone");
+            println!("2/ Multi");
+        
+            let mut input = String::new();
+            io::stdin().read_line(&mut input).expect("Failed to read line");
+            
+            match input.trim().parse() {
+                Ok(num) if num == 1 || num == 2 => break num,
+                _ => {
+                    println!("Invalid input. Please enter 1 or 2.");
+                }
+            }
+        };
+        
+        let (p1, p2): (Player, Player) = if mode == 1 {
+            Player::init_alone()
+        }else {
+            Player::init_multi()
+        };
+        
         let players = (p1, p2);
         let current_turn = players.0.clone();
         Game {
@@ -57,6 +79,15 @@ impl Game {
             }
         }
         
+        if self.check_end() {
+            return true;
+        }
+
+        self.change_turn();
+        true
+    }
+
+    fn check_end(&mut self) -> bool {
         if self.verify_win() {
             self.state = GameState::Win(self.current_turn.clone());
             println!("Player {} win !", match self.current_turn.sign() {
@@ -72,9 +103,7 @@ impl Game {
             println!("Draw, nobody wins !");
             return true;
         }
-        
-        self.change_turn();
-        true
+        false
     }
 
     //the checks if there is a winner, return true if there is one, else return false

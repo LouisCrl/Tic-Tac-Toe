@@ -1,0 +1,96 @@
+     #   #   
+1  X #   #   
+     #   #   
+  ###########
+     #   #   
+2    #   #   
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X #   #   
+     #   #   
+  ###########
+     #   #   
+2    #   # O 
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X #   #   
+     #   #   
+  ###########
+     #   #   
+2    # X # O 
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X #   # O 
+     #   #   
+  ###########
+     #   #   
+2    # X # O 
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Cross
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X #   # O 
+     #   #   
+  ###########
+     #   #   
+2  X # X # O 
+     #   #   
+  ###########
+     #   #   
+3    #   #   
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Ongoing
+----------------------------
+     #   #   
+1  X #   # O 
+     #   #   
+  ###########
+     #   #   
+2  X # X # O 
+     #   #   
+  ###########
+     #   #   
+3    #   # O 
+     #   #   
+   A   B   C 
+
+Current turn: Circle
+Game state: Win(Player { p_type: Bot, sign: Circle })
+----------------------------
