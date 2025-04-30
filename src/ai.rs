@@ -6,6 +6,7 @@ use crate::board::Board;
 pub struct AI;
 
 impl AI {
+    //returns the moove of the bot
     pub fn bot_playing(board: &Board) -> String {
         let boxes = Self::check_available(board);
 
@@ -14,11 +15,10 @@ impl AI {
         }
 
         let mut rng = rng();
-        let test = boxes.into_iter().choose(&mut rng).unwrap();
-        println!("{}", test);
-        test
+        boxes.into_iter().choose(&mut rng).unwrap()
     }
 
+    //check the bot available mooves
     pub fn check_available(board: &Board) -> Vec<String> {
         let mut boxes: Vec<String> = Vec::new();
 

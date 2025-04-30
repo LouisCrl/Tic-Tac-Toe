@@ -87,6 +87,7 @@ impl Game {
         true
     }
 
+    //this method check if this is the end of the game
     fn check_end(&mut self) -> bool {
         if self.verify_win() {
             self.state = GameState::Win(self.current_turn.clone());

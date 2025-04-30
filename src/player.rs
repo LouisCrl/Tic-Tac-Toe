@@ -19,15 +19,17 @@ impl Player {
         (Player{p_type: Type::Human, sign: Case::Cross}, Player{p_type: Type::Human, sign: Case::Circle})
     }
 
+    //initialisation of the 1 players (X) and a 1 bot (O)
     pub fn init_alone() -> (Self, Self) {
         (Player{p_type: Type::Human, sign: Case::Cross}, Player{p_type: Type::Bot, sign: Case::Circle})
     }
 
-    //returns the Case variant (Cross, Circle) of every players
+    //returns the Type variant (Human, Bot) of every players
     pub fn p_type(&self) -> &Type {
         &self.p_type
     }
 
+    //returns the Case variant (Cross, Circle) of every players
     pub fn sign(&self) -> &Case {
         &self.sign
     }

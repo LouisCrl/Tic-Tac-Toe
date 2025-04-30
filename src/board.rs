@@ -18,6 +18,7 @@ impl Board {
         }
     }
 
+    //returns the board
     pub fn board(&self) -> &Vec<Vec<Case>> {
         &self.board
     }
